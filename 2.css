@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #E6E6E6;
+    font-family: 'Courier Prime', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 800px;
+    position: relative;
+}
+
+/* Main Title Animation */
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.3;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s forwards ease-in-out;
+}
+
+h1 span {
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 15px;
+}
+
+.btn {
+    font-family: 'Courier Prime', monospace;
+    font-size: 14px;
+    padding: 8px 16px;
+    background: transparent;
+    border: 1px solid black;
+    cursor: pointer;
+    margin: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* Circle Animation */
+.circle {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate 10s infinite linear;
+}
+
+/* Recent Traffic */
+.recent-traffic {
+    margin-top: 40px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.recent-traffic h3 {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.recent-traffic ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recent-traffic li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin: 3px 0;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 1s forwards ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
